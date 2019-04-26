@@ -58,15 +58,14 @@ document.addEventListener('DOMContentLoaded',() => {
     fetch('http://localhost:3000/monsters',{
       method: 'POST',
       headers: {'Content-type': 'application/json'},
-      body: JSON.stringify(
+      body: JSON.stringify (
         {name: `${name.value}`},
         {age: `${age.value}`},
-        {decription: `${decription.value}`}
-      )
+        {description: `${description.value}`}
+      )})
       .then(res => res.json())
       .then(monsterForm.reset())
     })
-  })
 
   //add form to element
   createMonster.appendChild(monsterForm);
